@@ -1,0 +1,11 @@
+{
+    "name": "Jungle Snek",
+    "description": "An adorable rare jungle snek!",
+    "image": "ipfs://QmRujARrkux8nsUG8BzXJa8TiDyz5sDJnVKDqrk3LLsKLX",
+    "attributes": [
+        {
+            "trait_type": "cuteness",
+            "value": 100
+        }
+    ]
+}

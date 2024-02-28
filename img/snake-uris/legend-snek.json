@@ -1,0 +1,11 @@
+{
+    "name": "Jungle Snek",
+    "description": "An adorable legendary cosmic snek!",
+    "image": "ipfs://QmQuoS7y4ckM7xvg1c7he1pEozYfapRDJpuXdZGZKKxgrM",
+    "attributes": [
+        {
+            "trait_type": "cuteness",
+            "value": 100
+        }
+    ]
+}

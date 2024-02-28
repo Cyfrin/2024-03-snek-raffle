@@ -1,0 +1,11 @@
+{
+    "name": "Brown Snek",
+    "description": "An adorable common brown snek!",
+    "image": "ipfs://QmSrFwDtqPgHJC2cVKsoL3BDbf3c2wVHjtMLzNhQpSeEEu",
+    "attributes": [
+        {
+            "trait_type": "cuteness",
+            "value": 100
+        }
+    ]
+}
