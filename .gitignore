@@ -11,3 +11,4 @@ venv/
 .issues.md 
 .pytest_cache
 .build 
+snekmate-0.0.5rc3.dist-info

@@ -7,7 +7,7 @@
 """
 
 from .interfaces import VRFCoordinatorV2
-from .snekmate import ERC721
+from libraries.snekmate.tokens import ERC721
 
 initializes: ERC721
 

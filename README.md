@@ -24,7 +24,7 @@
     - [Stats](#stats)
 - [About](#about)
   - [New Vyper Compiler Features](#new-vyper-compiler-features)
-  - [snek\_raffle.vy](#snek_rafflevy)
+  - [snek_raffle.vy](#snek_rafflevy)
   - [It's a NFT](#its-a-nft)
   - [Chainlink VRF](#chainlink-vrf)
   - [Winnable Sneks](#winnable-sneks)
@@ -42,16 +42,22 @@
 # About
 The Puppy Raffle NFT team is back! And this time, they've learnt from their mistakes... It couldn't have been their fault their last contract had so many bugs, so puppies and solidity must have just been bad luck! They decided to try this again, with sneks and Vyper! Surely that was the issue last time? 😜
 
-The Puppy Raffle team loves being on the cutting edge, so this codebase is built with a [new beta release of the vyper compiler](https://x.com/vyperlang/status/1762203569715855826?s=20)!
+The Puppy Raffle team loves being on the cutting edge, so this codebase is built with a [new beta release of the vyper compiler](https://x.com/vyperlang/status/1762203569715855826)!
 
 ## New Vyper Compiler Features
 
-Introducing... Imports!! The vyper compiler now features imports, and you can see we use imports from the [snekmate](https://github.com/pcaversaccio/snekmate/) repo. In the `contracts/snekmate/` directory, we have copy-pasted the `ERC721.vy` contract into that folder, and made some slight modifications to make them compatible with the new compiler version. The `ERC721.vy` contract is considered out of scope for this audit. 
+Introducing... Imports!! The vyper compiler now features imports, and you can see we use imports from the [🐍 snekmate](https://github.com/pcaversaccio/snekmate) repo. We `pip` installed the library by invoking:
 
-You can see how we import the `ERC721.vy` contract in the `snek_raffle.vy` contract:
+```console
+pip3 install git+https://github.com/pcaversaccio/snekmate.git@modules -t contracts/libraries
+```
+
+We will use 🐍 snekmate's latest [`ERC721.vy`](./contracts/libraries/snekmate/tokens/ERC721.vy) contract, which is compatible with the latest Vyper compiler version, but the contract itself is considered out of scope for this audit.
+
+You can see how we import the [`ERC721.vy`](./contracts/libraries/snekmate/tokens/ERC721.vy) contract in the [`snek_raffle.vy`](./contracts/snek_raffle.vy) contract:
 
 ```python
-from .snekmate import ERC721 # Imports the contract 
+from libraries.snekmate.tokens import ERC721 # Imports the contract 
 initializes: ERC721          # This means that our contract initializes with the __init__ func of the ERC721 contract
 
 
@@ -93,7 +99,7 @@ The `snek_raffle.vy` is the main contract that the team is looking for a securit
 
 When someone wins a snek, it should have all the functionality of a normal NFT. It should be able to be viewed, transferred, approved, etc.
 
-*Note: If you find an issue with `ERC721.vy`, ignore it. If the `snek_raffle.vy` forgets to inherit a function, or inherits it wrong, consider that a bug. But if the function itself is wrong in `ERC721.vy`, that's fine. We are pretending that contract is perfect for this review.*
+_Note: If you find an issue with [`ERC721.vy`](./contracts/libraries/snekmate/tokens/ERC721.vy), ignore it. If the [`snek_raffle.vy`](./contracts/snek_raffle.vy) forgets to import/export a function, or uses it wrong, consider that a bug. But if the function itself is wrong in [`ERC721.vy`](./contracts/libraries/snekmate/tokens/ERC721.vy), that's fine. We are pretending that contract is perfect for this review._
 
 ## Chainlink VRF
 
@@ -144,8 +150,11 @@ cd 2024-03-snek-raffle
 2. Setup the virtual environment, and install packages
 ```
 make venv
+source ./venv/bin/activate
 make install
 ```
+
+_Be sure to run `source ./venv/bin/activate` before you install!_
 
 or, if `make` doesn't work:
 ```
@@ -193,14 +202,14 @@ python3 -m pytest
 
 - In Scope:
 
-```
-├── contracts
-│   ├── snek_raffle.vy
+```ml
+└── contracts
+    └── snek_raffle.vy
 ```
 
 ## Compatibilities
 
-- Vyper Version: `0.4.0b2` (Experimental new Vyper compiler version)
+- Vyper Version: [`0.4.0b1`](https://github.com/vyperlang/vyper/releases/tag/0.4.0b1) (Experimental new Vyper compiler version)
 - Chain(s) to deploy contract to:
   - Ethereum
   - Arbitrum

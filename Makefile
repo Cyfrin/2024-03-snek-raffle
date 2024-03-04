@@ -1,16 +1,17 @@
 -include .env
 
-.PHONY: all remove venv
+.ONESHELL:
 
-all :; remove install venv
+.PHONY: all remove venv activate 
 
-venv :; python3 -m venv ./venv && source ./venv/bin/activate 
+all :; remove install venv 
 
+venv :; python3 -m venv ./venv
+
+# remember to activate the virtual environment before running the following command
+# source ./venv/bin/activate
 install :; bash install.sh
-
-deactivate :; deactivate
-
-activate :; source ./venv/bin/activate
+# to deactivate the virtual environment, run `deactivate`
 
 clean :; rm -rf ./lib ./venv 
 

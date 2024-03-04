@@ -1,8 +1,7 @@
-# @version ^0.4.0b1
+# pragma version ~=0.4.0b2
 """
 @title Modern and Gas-Efficient ERC-721 + EIP-4494 Implementation
 @custom:contract-name ERC721
-@dev this is a modified version of the original snekmate codebase
 @license GNU Affero General Public License v3.0 only
 @author pcaversaccio
 @notice These functions implement the ERC-721
@@ -47,18 +46,55 @@
 """
 
 
-# @dev We import and implement the `ERC165` interface,
+# @dev We import and implement the `IERC165` interface,
 # which is a built-in interface of the Vyper compiler.
 from ethereum.ercs import IERC165
 implements: IERC165
 
 
-# @dev We import and implement the `ERC721` interface,
+# @dev We import and implement the `IERC721` interface,
 # which is a built-in interface of the Vyper compiler.
 from ethereum.ercs import IERC721
 implements: IERC721
 
-from ..interfaces import IERC721Receiver
+
+# @dev We import and implement the `IERC721Metadata`
+# interface, which is written using standard Vyper
+# syntax.
+import interfaces.IERC721Metadata as IERC721Metadata
+implements: IERC721Metadata
+
+
+# @dev We import and implement the `IERC721Enumerable`
+# interface, which is written using standard Vyper
+# syntax.
+import interfaces.IERC721Enumerable as IERC721Enumerable
+implements: IERC721Enumerable
+
+
+# @dev We import and implement the `IERC721Permit`
+# interface, which is written using standard Vyper
+# syntax.
+import interfaces.IERC721Permit as IERC721Permit
+implements: IERC721Permit
+
+
+# @dev We import and implement the `IERC4906` interface,
+# which is written using standard Vyper syntax.
+import interfaces.IERC4906 as IERC4906
+implements: IERC4906
+
+
+# @dev We import and implement the `IERC5267` interface,
+# which is written using standard Vyper syntax.
+from ..utils.interfaces import IERC5267
+implements: IERC5267
+
+
+# @dev We import the `IERC721Receiver` interface, which
+# is written using standard Vyper syntax.
+import interfaces.IERC721Receiver as IERC721Receiver
+
 
 # @dev Stores the ERC-165 interface identifier for each
 # imported interface. The ERC-165 interface identifier
