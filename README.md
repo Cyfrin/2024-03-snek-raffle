@@ -1,6 +1,6 @@
 
 <p align="center">
-<img src="./img/snake-images/snakes.png" width="400" alt="Snek Raffle">
+<img src="https://res.cloudinary.com/droqoz7lg/image/upload/q_90/dpr_2.0/c_fill,g_auto,h_320,w_320/f_auto/v1/company/ocawxe9a5ab2uh3tiozt?_a=BATAUVAA0" width="400" alt="Snek Raffle">
 <br/>
 
 # Contest Details
