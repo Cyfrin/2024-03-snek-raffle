@@ -52,6 +52,8 @@ Introducing... Imports!! The vyper compiler now features imports, and you can se
 pip3 install git+https://github.com/pcaversaccio/snekmate.git@modules -t contracts/libraries
 ```
 
+And then we removed all the files except the ones we needed.
+
 We will use 🐍 snekmate's latest [`ERC721.vy`](./contracts/libraries/snekmate/tokens/ERC721.vy) contract, which is compatible with the latest Vyper compiler version, but the contract itself is considered out of scope for this audit.
 
 You can see how we import the [`ERC721.vy`](./contracts/libraries/snekmate/tokens/ERC721.vy) contract in the [`snek_raffle.vy`](./contracts/snek_raffle.vy) contract:
