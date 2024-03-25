@@ -110,16 +110,6 @@ The contracts rely on the Chainlink VRF to get a random number. Assume the contr
 ## Winnable Sneks 
 
 
-<p align="center">
-<div style="display: flex; justify-content: center;">
-<img src="./img/snake-images/common-snake.png" width="200" alt="Snek Raffle">
-
-<img src="./img/snake-images/rare-snake.png" width="200" alt="Snek Raffle">
-
-<img src="./img/snake-images/legend-snek.png" width="200" alt="Snek Raffle">
-</div>
-</p>
-
 There are 3 NFTs that can be won in the snek raffle, each with varying rarity. 
 
 1. Brown Snek - 70% Chance to get
