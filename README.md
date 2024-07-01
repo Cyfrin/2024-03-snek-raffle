@@ -19,8 +19,6 @@
 - [Roles](#roles)
 - [Known Issues](#known-issues)
 
-[//]: # (contest-details-open)
-
 # Contest Details
 
 ### Prize Pool
@@ -36,6 +34,8 @@
 
 - nSLOC: 136
 - Complexity Score: 🐍
+
+[//]: # (contest-details-open)
 
 # About
 The Puppy Raffle NFT team is back! And this time, they've learnt from their mistakes... It couldn't have been their fault their last contract had so many bugs, so puppies and solidity must have just been bad luck! They decided to try this again, with sneks and Vyper! Surely that was the issue last time? 😜
