@@ -1,23 +1,4 @@
-
-<p align="center">
-<img src="https://res.cloudinary.com/droqoz7lg/image/upload/q_90/dpr_2.0/c_fill,g_auto,h_320,w_320/f_auto/v1/company/ocawxe9a5ab2uh3tiozt?_a=BATAUVAA0" width="400" alt="Snek Raffle">
-<br/>
-
-# Contest Details
-
-### Prize Pool
-
-- High - 100xp
-- Medium - 20xp
-- Low - 2xp
-
-- Starts: March 07, 2024 Noon UTC
-- Ends: March 14, 2024 Noon UTC
-
-### Stats
-
-- nSLOC: 136
-- Complexity Score: 🐍
+# First Flight #11: Snek-Raffle
 
 - [Contest Details](#contest-details)
     - [Prize Pool](#prize-pool)
@@ -38,6 +19,23 @@
 - [Roles](#roles)
 - [Known Issues](#known-issues)
 
+[//]: # (contest-details-open)
+
+# Contest Details
+
+### Prize Pool
+
+- High - 100xp
+- Medium - 20xp
+- Low - 2xp
+
+- Starts: March 07, 2024 Noon UTC
+- Ends: March 14, 2024 Noon UTC
+
+### Stats
+
+- nSLOC: 136
+- Complexity Score: 🐍
 
 # About
 The Puppy Raffle NFT team is back! And this time, they've learnt from their mistakes... It couldn't have been their fault their last contract had so many bugs, so puppies and solidity must have just been bad luck! They decided to try this again, with sneks and Vyper! Surely that was the issue last time? 😜
@@ -118,6 +116,15 @@ There are 3 NFTs that can be won in the snek raffle, each with varying rarity.
 
 The Chainlink VRF is used to get a random number, and the random number is used to determine the winner.
 
+## Roles
+
+- Chainlink VRF: The Chainlink VRF is responsible for providing a random number to the contract.
+- Users: People who can enter the raffle for the sneks. 
+
+[//]: # (contest-details-close)
+
+[//]: # (getting-started-open)
+
 # Getting Started 
 
 ## Requirements
@@ -190,6 +197,10 @@ or
 python3 -m pytest
 ```
 
+[//]: # (getting-started-close)
+
+[//]: # (scope-open)
+
 # Audit Scope Details
 
 - In Scope:
@@ -207,11 +218,12 @@ python3 -m pytest
   - Arbitrum
   - ZKSync
 
-# Roles
+[//]: # (scope-close)
 
-- Chainlink VRF: The Chainlink VRF is responsible for providing a random number to the contract.
-- Users: People who can enter the raffle for the sneks. 
+[//]: # (known-issues-open)
 
 # Known Issues
 
 - This is a beta release of the vyper compiler which hasn't undergone a security review itself, and we expect there to be some issues with the compiler itself, ignore those. 
+
+[//]: # (known-issues-close)
