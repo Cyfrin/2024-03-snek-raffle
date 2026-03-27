@@ -52,9 +52,9 @@ pip3 install git+https://github.com/pcaversaccio/snekmate.git@modules -t contrac
 
 And then we removed all the files except the ones we needed.
 
-We will use 🐍 snekmate's latest [`ERC721.vy`](./contracts/libraries/snekmate/tokens/ERC721.vy) contract, which is compatible with the latest Vyper compiler version, but the contract itself is considered out of scope for this audit.
+We will use 🐍 snekmate's latest [`ERC721.vy`](https://github.com/Cyfrin/2024-03-snek-raffle/blob/main/contracts/libraries/snekmate/tokens/ERC721.vy) contract, which is compatible with the latest Vyper compiler version, but the contract itself is considered out of scope for this audit.
 
-You can see how we import the [`ERC721.vy`](./contracts/libraries/snekmate/tokens/ERC721.vy) contract in the [`snek_raffle.vy`](./contracts/snek_raffle.vy) contract:
+You can see how we import the [`ERC721.vy`](https://github.com/Cyfrin/2024-03-snek-raffle/blob/main/contracts/libraries/snekmate/tokens/ERC721.vy) contract in the [`snek_raffle.vy`](https://github.com/Cyfrin/2024-03-snek-raffle/blob/main/contracts/snek_raffle.vy) contract:
 
 ```python
 from libraries.snekmate.tokens import ERC721 # Imports the contract 
